@@ -1,4 +1,4 @@
-// Copyright (c) 2018 The Fujicoin Core developers
+// Copyright (c) 2018 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #ifndef FUJICOIN_TEST_GEN_CRYPTO_GEN_H
