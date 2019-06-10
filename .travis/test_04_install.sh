@@ -9,7 +9,7 @@ export LC_ALL=C.UTF-8
 travis_retry docker pull "$DOCKER_NAME_TAG"
 
 export DIR_FUZZ_IN=${TRAVIS_BUILD_DIR}/qa-assets
-git clone https://github.com/fujicoin-core/qa-assets ${DIR_FUZZ_IN}
+git clone https://github.com/bitcoin-core/qa-assets ${DIR_FUZZ_IN}
 export DIR_FUZZ_IN=${DIR_FUZZ_IN}/fuzz_seed_corpus/
 
 mkdir -p "${TRAVIS_BUILD_DIR}/sanitizer-output/"
