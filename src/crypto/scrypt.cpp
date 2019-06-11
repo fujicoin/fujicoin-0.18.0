@@ -30,8 +30,8 @@
  * online backup system.
  */
 
-#include "scrypt.h"
-#include "hmac_sha256.h"
+#include <crypto/scrypt.h>
+#include <crypto/hmac_sha256.h>
 #include <stdlib.h>
 #include <stdint.h>
 #include <string.h>

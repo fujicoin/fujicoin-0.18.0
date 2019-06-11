@@ -6,16 +6,16 @@
 #ifndef BITCOIN_BIGNUM_H
 #define BITCOIN_BIGNUM_H
 
-#include "serialize.h"
-#include "arith_uint256.h"
-#include "version.h"
+#include <serialize.h>
+#include <arith_uint256.h>
+#include <version.h>
 
 #include <stdexcept>
 #include <stdint.h>
 #include <vector>
 
 #include <openssl/bn.h>
-#include <utilstrencodings.h>
+#include <util/strencodings.h>
 
 /** Errors thrown by the bignum class */
 class bignum_error : public std::runtime_error
@@ -396,24 +396,24 @@ public:
         return ToString(16);
     }
 
-    unsigned int GetSerializeSize(int nType=0, int nVersion=PROTOCOL_VERSION) const
-    {
-        return ::GetSerializeSize(getvch(), nType, nVersion);
-    }
+//    unsigned int GetSerializeSize(int nType=0, int nVersion=PROTOCOL_VERSION) const
+//    {
+//        return ::GetSerializeSize(getvch(), nType, nVersion);
+//    }
 
-    template<typename Stream>
-    void Serialize(Stream& s, int nType=0, int nVersion=PROTOCOL_VERSION) const
-    {
-        ::Serialize(s, getvch(), nType, nVersion);
-    }
+//    template<typename Stream>
+//    void Serialize(Stream& s, int nType=0, int nVersion=PROTOCOL_VERSION) const
+//    {
+//        ::Serialize(s, getvch(), nType, nVersion);
+//    }
 
-    template<typename Stream>
-    void Unserialize(Stream& s, int nType=0, int nVersion=PROTOCOL_VERSION)
-    {
-        std::vector<unsigned char> vch;
-        ::Unserialize(s, vch, nType, nVersion);
-        setvch(vch);
-    }
+//    template<typename Stream>
+//    void Unserialize(Stream& s, int nType=0, int nVersion=PROTOCOL_VERSION)
+//    {
+//        std::vector<unsigned char> vch;
+//        ::Unserialize(s, vch, nType, nVersion);
+//        setvch(vch);
+//    }
 
 
     bool operator!() const
